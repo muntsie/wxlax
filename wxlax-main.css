@@ -51,44 +51,65 @@ html {
 	font-family: Verdana, Geneva, sans-serif;
 }
 #main{
-	width: 90%;
 	background: #7f8193;
 	font-size: 1.5em;
+	margin:0 auto;
+	width: 96%;	
 }
 header{
 	background: #dce0ff;
-	font-size: 300%;
 	height: auto;
+	padding: 10px 0;
+	text-align: center;
 	width: 100%;
 }
 #heading{
-    font-size: 300%;
-}
-#heading a {
-	text-decoration: none;
-	color: #000000;
+    font-size: 200%;
 }
 #sub-heading{
     font-size: 150%;
 }
 #register{
+	padding:20px 0;	
 	text-align: center;
 }
 #twitter-feed{
 	text-align: center;
 }
 #games-app{
+	padding:20px 0;
 	text-align: center;
 }
 #player-app{
+	padding:20px 0;	
 	text-align: center;
 }
 #thank-sponsors{
+	padding:20px 0;
 	text-align: center;
 }
 #photos{
+	padding:20px 0;
 	text-align: center;
 }
 #girls-wxlax{
+	padding:20px 0;
 	text-align: center;
+}
+footer{
+	padding:20px 0 5px 0;
+	text-align: center;
+}
+
+/* media queries */
+@media only screen and (max-width: 480px)  {
+
+#games-app{
+	float:left;
+	padding-left: 200px; 
+}
+#player-app{
+	float:right;
+	padding-right: 200px;
+}
 }
