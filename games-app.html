@@ -1,0 +1,147 @@
+<!-- an approach or strategy for web development
+draw the general design layout of the web page 
+create the html document
+start with an html page table of contents (toc)
+add html tags
+program the css document
+start with a css page toc
+add css styling -->
+
+<!-- table of contents
+html
+head
+body
+logo
+navigation
+splash
+main
+announcing (three columns)
+centered_container (three columns)
+footer
+-->
+
+<!-- HTML SECTION --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD SECTION -->
+<head>
+
+<title>wxlax</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="woods cross high school lacrosse">
+    <meta name="keywords" content="lacrosse,woods cross,utah">
+    <meta name="author" content="Michael Huntsman">
+
+	<!-- Responsive stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- Responsive Stylesheets -->
+	<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="1024.css">
+	<link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="768.css">
+	<link rel="stylesheet" media="only screen and (max-width: 480px)" href="480.css">
+	<link rel="stylesheet" type="text/css" href="one-page.css">
+	
+	<link rel="shortcut icon" href="/wxlax.ico" type="image/x-icon" />
+
+	<link href="animations.css" rel="stylesheet" type="text/css">
+  
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+  
+</head>
+
+<!-- BODY SECTION -->
+<body data-ng-app="ngAnimate">
+
+<!-- LOGO SECTION -->
+<div id="logo">
+<font id="heading"><a href="http://wxlax.com">LACROSSE</a></font><br />
+<font id="sub-heading">WOODS CROSS - HIGH SCHOOL</font>
+</div><!-- end logo -->
+
+<!-- NAVIGATION SECTION -->
+<nav class="nav">
+	<ul>
+		<li class="current"><a href="http://wxlax.com" target="_blank">Home</a></li>				<li class="current"><a href="https://leagueathletics.com/Schedule.asp?org=utahlax.org&snid=lKKBS0K0%5C%3F" target="_blank">Game Schedule</a></li><!--game-schedule.php -->		<li><a href="https://docs.google.com/spreadsheets/d/1wsQSEU5EkZn49OCiUNkgu07MxBqTy-vkup66kVDLn2o/edit?usp=sharing/" target="_blank">Calendar</a></li> <!-- http://wxlaxcalendar.blogspot.com/ -->
+		<!-- <li><a href="http://wxlaxnews.blogspot.com" target="_blank">News</a></li> -->
+		<!-- <li><a href="http://wxboyslax.blogspot.com" target="_blank">Blog</a></li> -->
+		<!-- <li><a href="#">Roster</a></li>
+		<li><a href="#">Stats</a></li> -->
+	</ul>
+</nav>
+
+<!-- SPLASH SECTION -->
+<!--<div id="splash">
+<img src="img/splash_left.png">
+<img src="img/splash_center.png">
+<img src="img/splash_right.png">
+</div>-->
+<!-- end splash -->
+
+<!-- MAIN CONTENT SECTION -->
+<!-- This is the main container -->
+<div id="main">
+
+<!-- Columns Start -->
+<div id="announcing">
+
+<!-- two columns -->
+
+		<div class="section group">
+			<div class="col span_2_of_3">
+				<font class="announcing_header">2015 Game Schedule</font><br />
+				<font class="container-font">Junior Varsity "Home" Games begin at 6:00pm</font><br /><br />
+<a style="color:#ffffff" href="https://leagueathletics.com/Schedule.asp?org=utahlax.org&snid=lKKBS0K0%5C%3F" target="_blank">Click here for the Official ULA Schedule</a><br /><br />
+  <div ng-init="games = [
+  {opponent:'Syracuse', where:'home', when:'Friday, March 6th', time:'7:30pm'},
+  {opponent:'Timpview', where:'away', when:'Tuesday, March 10th', time:'TBD'},
+  {opponent:'Bountiful', where:'home', when:'Friday, March 13th', time:'7:30pm'},
+  {opponent:'West Lake', where:'away', when:'Tuesday, March 17th', time:'TBD'},
+  {opponent:'Highland', where:'home', when:'Friday, March 20th', time:'7:30pm'},
+  {opponent:'Timpanogos', where:'home', when:'Wednesday, March 25th', time:'7:30pm'},
+  {opponent:'West Jordan', where:'home', when:'Wednesday, April 8th', time:'7:30pm'},
+  {opponent:'Riverton', where:'away', when:'Tuesday, April 14th', time:'TBD'},
+  {opponent:'Judge', where:'home', when:'Thursday, April 16th', time:'7:30pm'},
+  {opponent:'Viewmont', where:'away', when:'Wednesday, April 22nd', time:'TBD'},
+  {opponent:'Box Elder', where:'away', when:'Friday, April 24th', time:'TBD'},
+  {opponent:'West', where:'away', when:'Monday, April 27th', time:'TBD'},
+  {opponent:'Bingham', where:'home', when:'Wednesday, April 29th', time:'7:30pm'}
+]">
+  <u>We had {{games.length}} games.</u><br />Sort by, "home", "april", bingham, monday, etc:<br />
+  <input type="search" ng-model="q" placeholder="type here..." />
+  <ul class="example-animate-container">
+    <li class="animate-repeat" ng-repeat="game in games | filter:q as results">
+      {{game.opponent}}, "{{game.where}}", on {{game.when}} at {{game.time}}.<hr>
+    </li>
+    <li class="animate-repeat" ng-if="results.length == 0">
+      <strong>No results found...</strong>
+    </li>
+  </ul>
+</div> <!-- end div ng-init -->
+	</div><!-- end left column -->
+					<!-- </div> -->
+					<div class="col span_1_of_3"><br />
+					<u>Have fun using our "Games App"!</u><br />
+					Type words "away", "tuesday",<br />
+					"riverton", or friday"...
+				<br /><br /><br />
+<img src="img/games-app.jpg">				
+					</div> <!-- end right column -->
+	</div> <!-- end section_group -->
+</div><!-- end main container -->
+
+<!-- FOOTER SECTION -->
+<footer id="footer">
+<a class="main" href="https://docs.google.com/forms/d/1VVmah8rgDa9IF6ZPdErcaq5mAiW1RbH-VVsjiPlbgpo/viewform?usp=send_form" target="_blank">Contact WXLAX</a>&nbsp;&nbsp;&nbsp;<a class="main" href="http://wxlaxsponsors.blogspot.com/" target="_blank">Sponsors</a>&nbsp;&nbsp;&nbsp;<a class="main" href="http://utahlax.org/" target="_blank">Utah LAX</a>&nbsp;&nbsp;&nbsp;<a class="main" href="http://www.wxlax.org/" target="_blank">WX GIRL'S LAX</a>&nbsp;&nbsp;&nbsp;<a class="main" href="http://www.uslacrosse.org/" target="_blank">US Lacrosse</a><br /><br />
+
+<center>&copy;&nbsp;WXLAX.COM</center>
+</footer>
+
+</body>
+
+</html>
