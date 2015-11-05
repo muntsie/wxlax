@@ -47,19 +47,19 @@ table {
 
 /* begin styling */
 html {
-	background:#000000;
-	font-family:Verdana, Geneva, sans-serif;
+	background: #000000;
+	font-family: Verdana, Geneva, sans-serif;
 }
 #main{
-	width:90%;
-	background:#7f8193;
-	font-size:1.5em;
+	width: 90%;
+	background: #7f8193;
+	font-size: 1.5em;
 }
 header{
-	background:#dce0ff;
-	font-size:300%;
-	height:auto;
-	width:100%;
+	background: #dce0ff;
+	font-size: 300%;
+	height: auto;
+	width: 100%;
 }
 #heading{
     font-size: 300%;
@@ -70,4 +70,10 @@ header{
 }
 #sub-heading{
     font-size: 150%;
+}
+#register{
+	text-align: center;
+}
+#twitter-feed{
+	text-align: center;
 }
